@@ -1,4 +1,4 @@
-# cv2_Adaptive_Thresh
+# Adaptive Threshold
 
 # Code overview
 Adaptive threshold techniques for segmentation of binary images.
