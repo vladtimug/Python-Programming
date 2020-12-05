@@ -129,8 +129,6 @@ def copy_text(event):
             selected = getattr(app, 'T').selection_get()        
             app.main.clipboard_clear()
             app.main.clipboard_append(selected)
-
-#def undo_text(event):
     
      
 root = Tk()
