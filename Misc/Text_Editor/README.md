@@ -1,5 +1,5 @@
 Code Overview
-+ This program defines and controls a text editor called 'Editext-Bets'. The features of the editor are listed below
++ This program defines and controls a text editor called 'Editext-Bets', using Tkinter. The features of the editor are listed below
 
 Features
 + New Document
