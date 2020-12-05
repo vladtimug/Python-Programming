@@ -1,4 +1,4 @@
-Text Editor
+Code Overview
 + This program defines and controls a text editor called 'Editext-Bets'. The features of the editor are listed below
 
 Features
