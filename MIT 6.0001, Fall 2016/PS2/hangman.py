@@ -10,9 +10,6 @@ WORDLIST_FILENAME = "words.txt"
 def load_words():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
-
-    Depending on the size of the word list, this function may
-    take a while to finish.
     """
     # print("Loading word list from file...")
     # inFile: file
@@ -63,7 +60,7 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters, underscores (_), and spaces that represents
       which letters in secret_word have been guessed so far.
     """
-   
+
     word_copy_dash = ""
     for pos in range(len(secret_word)):
         word_copy_dash += "_ "
@@ -84,7 +81,7 @@ def get_available_letters(letters_guessed):
     returns: string (of letters), comprised of letters that represents which letters have not
       yet been guessed.
     """
-    
+
     res = string.ascii_lowercase
     for letter in letters_guessed:
         if letter in string.ascii_lowercase:
@@ -97,7 +94,7 @@ def unique_letters(secret_word):
     *secret_word: string, the secret word to be guessed
     *returns: uniques, int, number of unique letters in secret_word
     """
-    
+
     uniques = 0
     for char in list(secret_word):
         if secret_word.count(char) == 1:
@@ -112,29 +109,12 @@ def hangman(secret_word):
 
     Starts up an interactive game of Hangman.
 
-    * At the start of the game, let the user know how many
-      letters the secret_word contains and how many guesses s/he starts with.
-
-    * The user should start with 6 guesses
-
-    * Before each round, you should display to the user how many guesses
-      s/he has left and the letters that the user has not yet guessed.
-
-    * Ask the user to supply one guess per round. Remember to make
-      sure that the user puts in a letter!
-
-    * The user should receive feedback immediately after each guess
-      about whether their guess appears in the computer's word.
-
-    * After each guess, you should display to the user the
-      partially guessed word so far.
-
     Follows the other limitations detailed in the problem write-up.
     """
-    
+
     print()
     print("\nI am thinking of a word that is {} letters long.".format(len(secret_word)))
-    print(secret_word)
+    # print(secret_word)
     guesses = len(secret_word) + 3
     guesses_copy = guesses
     guessed = False
@@ -250,7 +230,7 @@ def match_with_gaps(my_word, other_word):
         _ , and my_word and other_word are of the same length;
         False otherwise:
     """
-    
+
     my_word_list = my_word.split()
     pos1 = list(enumerate(my_word_list))
     pos2 = list(enumerate(other_word))
@@ -280,11 +260,6 @@ def show_possible_matches(my_word):
     """
     my_word: string with _ characters, current guess of secret word
     returns: nothing, but should print out every word in wordlist that matches my_word
-             Keep in mind that in hangman when a letter is guessed, all the positions
-             at which that letter occurs in the secret word are revealed.
-             Therefore, the hidden letter(_ ) cannot be one of the letters in the word
-             that has already been revealed.
-
     """
 
     my_word = my_word.split()
@@ -329,32 +304,11 @@ def hangman_with_hints(secret_word):
 
     Starts up an interactive game of Hangman.
 
-    * At the start of the game, let the user know how many
-      letters the secret_word contains and how many guesses s/he starts with.
-
-    * The user should start with 6 guesses
-
-    * Before each round, you should display to the user how many guesses
-      s/he has left and the letters that the user has not yet guessed.
-
-    * Ask the user to supply one guess per round. Make sure to check that the user guesses a letter
-
-    * The user should receive feedback immediately after each guess
-      about whether their guess appears in the computer's word.
-
-    * After each guess, you should display to the user the
-      partially guessed word so far.
-
-    * If the guess is the symbol *, print out all words in wordlist that
-      matches the current guessed word.
-
     Follows the other limitations detailed in the problem write-up.
     """
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
     print()
     print("\nI am thinking of a word that is {} letters long.".format(len(secret_word)))
-    print(secret_word)
+    # print(secret_word)
     guesses = len(secret_word) + 3
     guesses_copy = guesses
     guessed = False
@@ -469,6 +423,7 @@ def hangman_with_hints(secret_word):
 
 if __name__ == "__main__":
 
+    wordlist = load_words()
     hints = input("Would you like to play the game with hints? y/n: ")
 
     if hints == "n" or hints == "no":
