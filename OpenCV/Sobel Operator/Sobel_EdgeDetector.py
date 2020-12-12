@@ -1,8 +1,6 @@
 import cv2
 import numpy as np
 
-#cam = cv2.VideoCapture(0)
-
 cv2.namedWindow('Test')
 
 def conv_transform(image):
@@ -69,10 +67,6 @@ kernel[2,0] =-2
 kernel[2,1] =  0
 kernel[2,2] =  2
 
-##while True:
-##    ret, frame = cam. read()
-##    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
 path = r'C:\Users\Vlad Timu\Downloads\python-kuwahara-master\python-kuwahara-master\3.jpg'
 frame = cv2.imread(path)     
 gy = conv(frame, kernel)
@@ -83,10 +77,5 @@ cv2.imshow('gradienty', gy)
 cv2.imshow('gradientx', gx)
 cv2.imshow('Sobel_Edge', g_sobel)
 
-##    k = cv2.waitKey(5) & 0xFF
-##    if k == 27: 
-##        break
-
 cv2.waitKey(0)
-#cam.release()
 cv2.destroyAllWindows()
