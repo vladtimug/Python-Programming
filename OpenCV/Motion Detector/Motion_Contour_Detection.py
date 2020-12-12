@@ -36,14 +36,6 @@ while cap.isOpened():
     dilated = cv2.dilate(thresh, None, iterations = 3)
     contours, _ = cv2.findContours(dilated, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-    #hands = hand_cascade.detectMultiScale(gray, 1.3, 5)
-    #palms = palm_cascade.detectMultiScale(gray, 1.3, 5)
-
-    #for x,y,w,h in hands:
-    #    cv2.rectangle(frame2, (x,y), (x+w, y+h), (255, 0, 0), 2)
-    #    roi_gray = gray [y: y+h, x: x+w]
-    #    roi_color = frame2[y: y+h, x: x+w]
-
     for contour in contours:
         (x,y,w,h) = cv2.boundingRect(contour)       #save coordinates of the found contours
         if cv2.contourArea(contour) < 8000:
@@ -64,11 +56,8 @@ while cap.isOpened():
     cv2.imshow('Dilated', dilated)
 
     print('FPS: ', int(fps), end = '\r')
-    #print('Data type: ', frame1.dtype)
     if cv2.waitKey(30) == 27:
         break
 
 cap.release()
 cv2.destroyAllWindows()
-
-#Mapping Function for a Cell bounding box of 225x242 mm 
