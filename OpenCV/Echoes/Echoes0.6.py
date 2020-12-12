@@ -1,4 +1,4 @@
-#This application reads a video strem from the webcam and detects faces and face features using haars cascade algorithm.
+#This application reads a video strem from the webcam and detects faces and face features using haar cascade algorithm.
 
 import cv2
 import numpy as np
