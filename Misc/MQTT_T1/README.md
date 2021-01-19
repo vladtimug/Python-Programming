@@ -16,3 +16,5 @@ The client responds to the following messages:
 Default topic is TOPIC_1. It is recommended to change it to a relevant name.
 
 The publisher of the message can be either a mosquitto instance from the terminal for demonstration purposes or a dashboard panel from IoT MQTT Panel application found on Play Store. Make sure to use the same IP adress when configuring the mosquitto publisher or the panel dashbord from the android app. For more info on syntax for mosquitto publisher, do 'sudo apt update && sudo apt -y upgrade && sudo apt install mosquitto' in your terminal. 
+
+Run script with sudo permissions.
