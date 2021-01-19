@@ -6,7 +6,7 @@ import subprocess
 # The callback for when the client receives a CONNACK response from the server
 def on_connect(client, userdata, rc, properties=None):
 	print("Connected with result code "+ str(rc))
-	client.subscribe("VLAD") # renew subscription to the topic if the client gets disconnected
+	client.subscribe("TOPIC_1") # renew subscription to the topic if the client gets disconnected
 
 def on_message(clien, userdata, message):
 	message.payload = message.payload.decode("utf-8")
