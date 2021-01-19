@@ -1,4 +1,5 @@
-The project uses the python module 'paho' to implement a mqtt client which interracts with a RaspberryPi read/write built-in capabilities. 
+<h1>The project uses the python module 'paho' to implement a mqtt client which interracts with a RaspberryPi read/write built-in capabilities.</h1>
+
 The client responds to the following messages:
   + 'on_green' - turns on the built-in green LED from the Pi
   + 'off_green' - turns off the built-in green LED from the Pi
@@ -11,3 +12,5 @@ The client responds to the following messages:
   + 'heartbeat_green_off' - disengages the green LED from the heartbeat behaviour
   + 'heartbeat_red' - engages the red LED in a heartbeat behaviour
   + 'heartbeat_red_off' - disengages the red LED from the heartbeat behaviour
+
+Default topic is VLAD. It is recommended to change the 
