@@ -1,4 +1,4 @@
-<h1>The project uses the python module 'paho' to implement a mqtt client which interracts with a RaspberryPi read/write built-in capabilities.</h1>
+<h1>The project uses the 'paho' python module to implement a mqtt client which interracts with a RaspberryPi read/write built-in capabilities.</h1>
 
 The client responds to the following messages:
   + 'on_green' - turns on the built-in green LED from the Pi
