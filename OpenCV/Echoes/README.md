@@ -1,5 +1,6 @@
 Code overview
 
++ Purpose of the script is to process images and extract data necessary to control a kinetic sculpture
 + This program uses Haar like features to detect faces in frames read from a camera using OpenCV library.
 + The face location is then processed to further analyze and decide over which column and row should be activated
 + A mirror efect prevention feature was added in order for the system to work naturally
