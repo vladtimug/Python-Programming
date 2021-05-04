@@ -4,7 +4,6 @@ cap = cv.VideoCapture(0)
 
 while True:
     ret, frame = cap.read()
-    ret = 0
     if ret:
         gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
         gray = cv.medianBlur(gray, 1)
